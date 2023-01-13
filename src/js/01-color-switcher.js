@@ -7,11 +7,10 @@ function getRandomHexColor() {
   }
 
 startBtn.addEventListener('click', () => {
-    randomHex = setInterval(() => {
+    const randomHex = setInterval(() => {
         body.style.backgroundColor = `${getRandomHexColor()}`
     },1000)
 })
-
 stopBtn.addEventListener('click', () => {
     clearInterval(randomHex);
 })
