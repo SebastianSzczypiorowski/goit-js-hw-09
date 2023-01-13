@@ -6,10 +6,17 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
 
+function colorSwitcher(){
+    
+}
+function stopInterval(){
+    clearInterval(randomHex);
+}
 
- const randomHex = setInterval(() => {
+startBtn.addEventListener('click', () => {
+    let randomHex = setInterval(() => {
         body.style.backgroundColor = `${getRandomHexColor()}`
     },1000)
-const stopRandomHex = stopInterval(randomHex);
-startBtn.addEventListener('click', randomHex)
-stopBtn.addEventListener('click', stopRandomHex)
+    stopBtn.addEventListener('click', () => {
+        clearInterval(randomHex);
+    })})
