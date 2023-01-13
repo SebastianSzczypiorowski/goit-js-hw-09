@@ -72,10 +72,10 @@ function convertMs(ms) {
             Hours.innerHTML = addLeadingZero(result.hours)
             Minutes.innerHTML = addLeadingZero(result.minutes)
             Seconds.innerHTML = addLeadingZero(result.seconds)
-            
+            startBtn.disabled = true;
         }
         
-
+        
 
         console.log(convertMs(ms))
     }, 1000)
