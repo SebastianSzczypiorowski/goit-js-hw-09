@@ -34,14 +34,14 @@ function convertMs(ms) {
 
  
 
-Input.addEventListener('input' , () => {
-  let inputDate = new Date(Input.value).getTime();
-  if(inputDate = Date.now()) {
-    startBtn.disabled = true;
-  } else {
-    startBtn.disabled=false;
-  }
-})
+// Input.addEventListener('input' , () => {
+//   let inputDate = new Date(Input.value).getTime();
+//   if(inputDate = Date.now()) {
+//     startBtn.disabled = true;
+//   } else {
+//     startBtn.disabled=false;
+//   }
+// })
 
 
   
