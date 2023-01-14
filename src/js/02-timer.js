@@ -64,8 +64,16 @@ function convertMs(ms) {
         if(ms < 0){
             clearInterval(Timer);
             Notiflix.Notify.failure('Please choose a date in the future')
+            Days.textContent = '00'
+            Hours.textContent = '00'
+            Minutes.textContent = '00'
+            Seconds.textContent = '00'
         } if (ms = 0) {
             clearInterval(Timer);
+            Days.textContent = '00'
+            Hours.textContent = '00'
+            Minutes.textContent = '00'
+            Seconds.textContent = '00'
         } else {
           startBtn.disabled = false;
             Days.innerHTML = addLeadingZero(result.days)
