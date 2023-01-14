@@ -20,9 +20,9 @@ event.preventDefault();
 const firstDelay = Number(form.delay.value);
 const step = Number(form.step.value);
 const amount = Number(form.amount.value);
-
+btn.disabled = true;
 for(let i = 0 ; i < amount; i++) {
 const position = i + 1;
 const delay = firstDelay + step * i;
 
-createPromise(position,delay).then(({ postion, delay}) => {Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);}) .catch(({ position, delay}) => {Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);})}})
+createPromise(position,delay).then(({ postion, delay}) => {Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);}) .catch(({ position, delay}) => {Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);})} btn.disabled = false;})

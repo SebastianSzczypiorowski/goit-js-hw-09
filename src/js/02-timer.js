@@ -34,16 +34,14 @@ function convertMs(ms) {
 
  
 
+startBtn.disabled = true;
+
 Input.addEventListener('input' , () => {
   let inputDate = new Date(Input.value).getTime();
   if(inputDate = Date.now()) {
     startBtn.disabled = false;
-  } else {
-    startBtn.disabled= true;
-  }
+  } 
 })
-// console.log(inputDate);
-// console.log(Date.now);
 
   
  
@@ -68,6 +66,8 @@ Input.addEventListener('input' , () => {
         } else if (ms = 0) {
             clearInterval(Timer);
         } else {
+
+          startBtn.disabled = true;
             Days.innerHTML = addLeadingZero(result.days)
             Hours.innerHTML = addLeadingZero(result.hours)
             Minutes.innerHTML = addLeadingZero(result.minutes)
