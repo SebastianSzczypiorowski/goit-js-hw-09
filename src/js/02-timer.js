@@ -68,24 +68,20 @@ function convertMs(ms) {
             Hours.textContent = '00'
             Minutes.textContent = '00'
             Seconds.textContent = '00'
-        } if (ms = 0) {
+        } else if (ms = 0) {
             clearInterval(Timer);
             Days.textContent = '00'
             Hours.textContent = '00'
             Minutes.textContent = '00'
             Seconds.textContent = '00'
         } else {
-          startBtn.disabled = false;
+          // startBtn.disabled = false;
             Days.innerHTML = addLeadingZero(result.days)
             Hours.innerHTML = addLeadingZero(result.hours)
             Minutes.innerHTML = addLeadingZero(result.minutes)
             Seconds.innerHTML = addLeadingZero(result.seconds)
-            startBtn.disabled = true;
+            // startBtn.disabled = true;
         }
-        
-        
-
-        console.log(convertMs(ms))
     }, 1000)
   
   })
