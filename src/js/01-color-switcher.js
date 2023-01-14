@@ -11,7 +11,8 @@ startBtn.addEventListener('click', () => {
     let randomHex = setInterval(() => {
         body.style.backgroundColor = `${getRandomHexColor()}`
     },1000)
-    })
-    stopBtn.addEventListener('click', () => {
+})
+stopBtn.addEventListener('click', (startBtn) => {
         clearInterval(randomHex);
+    
     })
