@@ -8,22 +8,21 @@ function getRandomHexColor() {
 
 
 
-
+let randomHex;
 
 startBtn.addEventListener('click', event => {
     event.preventDefault();
     startBtn.disabled = true;
     stopBtn.disabled = false;
+    if(!randomHex){
     randomHex = setInterval(() => {
        body.style.backgroundColor = `${getRandomHexColor()}`
    },1000)
+}
 })
 stopBtn.addEventListener('click', () => {
     stopBtn.disabled = true;
     startBtn.disabled = false;
-    randomHex = setInterval(() => {
-        body.style.backgroundColor = `${getRandomHexColor()}`
-    },1000)
     if(randomHex){    
         clearInterval(randomHex);
     }
