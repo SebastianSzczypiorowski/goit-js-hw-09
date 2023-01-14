@@ -8,6 +8,8 @@ function getRandomHexColor() {
 
 
 
+
+
 startBtn.addEventListener('click', event => {
     event.preventDefault();
     startBtn.disabled = true;
@@ -19,6 +21,9 @@ startBtn.addEventListener('click', event => {
 stopBtn.addEventListener('click', () => {
     stopBtn.disabled = true;
     startBtn.disabled = false;
+    randomHex = setInterval(() => {
+        body.style.backgroundColor = `${getRandomHexColor()}`
+    },1000)
     if(randomHex){    
         clearInterval(randomHex);
     }

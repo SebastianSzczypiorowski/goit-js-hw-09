@@ -34,15 +34,16 @@ function convertMs(ms) {
 
  
 
-// Input.addEventListener('input' , () => {
-//   let inputDate = new Date(Input.value).getTime();
-//   if(inputDate = Date.now()) {
-//     startBtn.disabled = true;
-//   } else {
-//     startBtn.disabled=false;
-//   }
-// })
-
+Input.addEventListener('input' , () => {
+  let inputDate = new Date(Input.value).getTime();
+  if(inputDate = Date.now()) {
+    startBtn.disabled = false;
+  } else {
+    startBtn.disabled= true;
+  }
+})
+// console.log(inputDate);
+// console.log(Date.now);
 
   
  
@@ -62,25 +63,15 @@ function convertMs(ms) {
         const result = convertMs(ms);
 
         if(ms < 0){
+            Notiflix.Notify.failure('Please choose a date in the future')        
             clearInterval(Timer);
-            Notiflix.Notify.failure('Please choose a date in the future')
-            Days.textContent = '00'
-            Hours.textContent = '00'
-            Minutes.textContent = '00'
-            Seconds.textContent = '00'
         } else if (ms = 0) {
             clearInterval(Timer);
-            Days.textContent = '00'
-            Hours.textContent = '00'
-            Minutes.textContent = '00'
-            Seconds.textContent = '00'
         } else {
-          // startBtn.disabled = false;
             Days.innerHTML = addLeadingZero(result.days)
             Hours.innerHTML = addLeadingZero(result.hours)
             Minutes.innerHTML = addLeadingZero(result.minutes)
             Seconds.innerHTML = addLeadingZero(result.seconds)
-            // startBtn.disabled = true;
         }
     }, 1000)
   
